@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-07T18:20:19.226813" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\Admin\PycharmProjects\Robot_project\test.robot">
+<test id="s1-t1" name="Open YouTube And Search For Video" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-07T18:20:19.829874" level="INFO">Opening browser 'chrome' to base url 'https://youtube.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-07T18:20:19.829399" elapsed="10.946736"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-07T18:20:30.777453" elapsed="0.189159"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-07T18:20:30.975792" level="INFO">Typing text 'chrome' into text field 'name=search_query'.</msg>
+<arg>name=search_query</arg>
+<arg>${BROWSER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-07T18:20:30.974509" elapsed="1.743362"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-10-07T18:20:32.739497" level="INFO">Sending key(s) ('RETURN',) to name=search_query element.</msg>
+<msg time="2025-10-07T18:20:33.185422" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-10-07T18:20:33.185599" level="INFO">Releasing special key RETURN.</msg>
+<arg>name=search_query</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-10-07T18:20:32.738406" elapsed="0.644882"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-07T18:20:33.383848" elapsed="2.677356"/>
+</kw>
+<doc>This test demonstrate the matplotlib</doc>
+<status status="PASS" start="2025-10-07T18:20:19.827784" elapsed="16.234448"/>
+</test>
+<doc>This Open the Youtube and search for matplotlib</doc>
+<status status="PASS" start="2025-10-07T18:20:19.229994" elapsed="16.834876"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
