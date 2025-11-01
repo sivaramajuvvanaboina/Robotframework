@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-07T18:20:19.226813" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\Admin\PycharmProjects\Robot_project\test.robot">
-<test id="s1-t1" name="Open YouTube And Search For Video" line="11">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-11-01T17:04:16.941238" rpa="false" schemaversion="5">
+<suite id="s1" name="Google Search" source="C:\Users\Admin\PycharmProjects\Robot_project\google_search.robot">
+<test id="s1-t1" name="Open Google And Search" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-07T18:20:19.829874" level="INFO">Opening browser 'chrome' to base url 'https://youtube.com'.</msg>
+<msg time="2025-11-01T17:04:17.564962" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-07T18:20:19.829399" elapsed="10.946736"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-07T18:20:30.777453" elapsed="0.189159"/>
+<status status="PASS" start="2025-11-01T17:04:17.564558" elapsed="3.630592"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-07T18:20:30.975792" level="INFO">Typing text 'chrome' into text field 'name=search_query'.</msg>
-<arg>name=search_query</arg>
-<arg>${BROWSER}</arg>
+<msg time="2025-11-01T17:04:21.196383" level="INFO">Typing text 'Robot Framework tutorial' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>${SEARCH_TEXT}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-07T18:20:30.974509" elapsed="1.743362"/>
+<status status="PASS" start="2025-11-01T17:04:21.195704" elapsed="0.299408"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-10-07T18:20:32.739497" level="INFO">Sending key(s) ('RETURN',) to name=search_query element.</msg>
-<msg time="2025-10-07T18:20:33.185422" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-10-07T18:20:33.185599" level="INFO">Releasing special key RETURN.</msg>
-<arg>name=search_query</arg>
-<arg>RETURN</arg>
+<msg time="2025-11-01T17:04:21.496817" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2025-11-01T17:04:21.820866" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-11-01T17:04:21.820973" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=q</arg>
+<arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-10-07T18:20:32.738406" elapsed="0.644882"/>
+<status status="PASS" start="2025-11-01T17:04:21.495859" elapsed="0.340967"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-11-01T17:04:27.075404" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-01T17:04:27.075706" level="FAIL">Text 'Robot Framework' did not appear in 5 seconds.</msg>
+<arg>Robot Framework</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-11-01T17:04:21.837209" elapsed="5.243270">Text 'Robot Framework' did not appear in 5 seconds.</status>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-07T18:20:33.383848" elapsed="2.677356"/>
+<status status="NOT RUN" start="2025-11-01T17:04:27.080975" elapsed="0.000064"/>
 </kw>
-<doc>This test demonstrate the matplotlib</doc>
-<status status="PASS" start="2025-10-07T18:20:19.827784" elapsed="16.234448"/>
+<doc>This test opens Google, searches for a keyword, and verifies results</doc>
+<status status="FAIL" start="2025-11-01T17:04:17.563021" elapsed="9.518395">Text 'Robot Framework' did not appear in 5 seconds.</status>
 </test>
-<doc>This Open the Youtube and search for matplotlib</doc>
-<status status="PASS" start="2025-10-07T18:20:19.229994" elapsed="16.834876"/>
+<status status="FAIL" start="2025-11-01T17:04:16.943656" elapsed="10.140465"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="Google Search" id="s1" pass="0" fail="1" skip="0">Google Search</stat>
 </suite>
 </statistics>
 <errors>
